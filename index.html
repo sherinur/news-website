@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News web page</title>
 </head>
+<body style="width: 100%;
+height: 100vh;
+margin: 0;
+background-color: #383c6a;
+color: #f5f6f7;
+font-family: Tahoma;
+font-size: 19px;">
+    <header style="max-height: 20em;">
+        <!-- Navigation -->
+        <nav style=" margin: 0 auto; max-width: 50em;">
+            <ul style="display: flex; justify-content: space-between; margin: 2em; list-style-type: none;">
+                <li><a href="./index.html" style="color: #f5f6f7; background-color: #7b024f; padding: 5px;">Home</a></li>
+                <li><a href="./aboutus.html" style="color: #f5f6f7;">About us</a></li>
+                <li><a href="./login.html" style="color: #f5f6f7;">Log in</a></li>
+                <li><a href="./signup.html" style="color: #f5f6f7;">Sign up</a></li>
+                <li><select id="language-select">
+                    <option value="english">English</option>
+                    <option value="kazakh">Қазақша</option>
+                    <option value="russian">Русский</option>
+                </select></li>
+            </ul>
+        </nav>
+      </header>
 
-<body>
-    <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information</p>
-    <form method="post" action='https://register-demo.freecodecamp.org'>
-        <fieldset>
-            <label for="first-name">Enter Your First Name: <input id="first-name" type="text" /></label> <label
-                for="last-name">Enter Your Last Name: <input id="last-name" type="text" /></label>
-            <label for="email">Enter Your Email: <input id="email" type="email" /></label>
-            <label for="new-password">Create a New Password: <input id="new-password" type="password" /></label>
-        </fieldset>
-        <fieldset></fieldset>
-        <fieldset></fieldset>
+      <div class="wrapper" style="max-width: 50em; margin: 0 auto;">
+    <main>
+      <!-- News section -->
+      <section id="news">
 
-    </form>
+        <div>
+            <hr>
+            <article class="title">  
+                <h1><i>Harris’s Debate Challenge: Pushing Ahead Without Leaving Biden Behind</i></h1>
+                <p>At Tuesday’s debate, Kamala Harris, the vice president, will try to promote herself as a change candidate without criticizing President Biden,
+                 whom she has served for years.</p>
+            </article>
+             <div class="image-block" style="color:#698b8f;">
+                <img src="src/post1img1.webp" alt="debate-photo" style="width: 100%;">
+                Advisers to Vice President Kamala Harris say she has introduced some policies that 
+                they hope will appeal to voters, and strike a subtle contrast with President 
+                Biden.Credit...Tierney L. Cross for The New York Times
+             </div>
+            
+            <div class="item-info" style="display: flex; max-height: 10em; margin: 10px;">
+                <div class="authors"></div>
+                <img src="src/author1.png" style="max-width: 3em; max-height: 3em; margin-right: 25px;" alt="author-image">
+                <h3>By <a href="#" style="color: #f5f6f7;" >Katie Rogers</a></h3>
+            </div>
+            <article>
+                <p>
+                    Vice President Kamala Harris will try to use her debate on Tuesday against 
+                    former President Donald J. Trump to argue that Americans are ready to turn 
+                    the page on the politics of the past decade, with its turmoil and social animus.
+                </p>
+                <p>
+                    But Mr. Trump, standing just feet away, is likely to make a different case: 
+                    He is expected to try to paint Ms. Harris, the sitting vice president, as 
+                    the candidate of the status quo.
+                </p>
+                <p>
+                    The debate will pose a challenge for Ms. Harris, who will have to decide how much to embrace or distance 
+                    herself from President Biden and his policies at 
+                    a moment when polls show that many Americans are hungry for change. It is a conundrum other vice presidents have 
+                    faced while seeking the presidency, and Ms. Harris’s allies said she would have to tread carefully as she makes a case for herself.
+                </p>
+                <p>“She can praise Biden and talk about the accomplishments, but also acknowledge that the work is not done,” said Bakari Sellers, an ally 
+                    of Ms. Harris and a Democratic political commentator. “So she has to be willing 
+                    to display to the American people a level of empathy and understanding, and not simply say everything we did was God’s gift to politics.”
+                </p>
+            </article>
+            
+
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/8LNbaDVTeKo?si=PXzZzCdgsTsCbA7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <article>
+                <p>“She can praise Biden and talk about the accomplishments, but also acknowledge that the work is not done,” said Bakari Sellers, an ally 
+                    of Ms. Harris and a Democratic political commentator. “So she has to be willing 
+                    to display to the American people a level of empathy and understanding, and not simply say everything we did was God’s gift to politics.”
+                </p>
+            </article>
+            <hr>
+        </div>
+
+      </section>
+    </main>
+    <!-- Footer -->
+      <footer>
+        <h3>© 2024 Nurislam Sheri SE-2325</h3>
+        <p>News That Matters, Delivered Daily</p>
+        <a href="./aboutus.html" style="color: #f5f6f7;">About us</a>
+        <hr>
+      </footer>
+      </div>
+     
 </body>
-
 </html>
