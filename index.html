@@ -1,106 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News web page</title>
+    <meta name="description" content="News web-site">
+    <title>The News</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/darkmode-toggle.css">
 </head>
-<body style="width: 100%;
-height: 100vh;
-margin: 0;
-background-color: #383c6a;
-color: #f5f6f7;
-font-family: Tahoma;
-font-size: 19px;">
-    <header style="max-height: 20em;">
-        <!-- Navigation -->
-        <nav style=" margin: 0 auto; max-width: 50em;">
-            <ul style="display: flex; justify-content: space-between; margin: 2em; list-style-type: none;">
-                <li><a href="./index.html" style="color: #f5f6f7; background-color: #7b024f; padding: 5px;">Home</a></li>
-                <li><a href="./aboutus.html" style="color: #f5f6f7;">About us</a></li>
-                <li><a href="./login.html" style="color: #f5f6f7;">Log in</a></li>
-                <li><a href="./signup.html" style="color: #f5f6f7;">Sign up</a></li>
-                <li><select id="language-select">
-                    <option value="english">English</option>
-                    <option value="kazakh">Қазақша</option>
-                    <option value="russian">Русский</option>
-                </select></li>
-            </ul>
-        </nav>
-      </header>
+<body>
+        <header class="header">
 
-      <div class="wrapper" style="max-width: 50em; margin: 0 auto;">
-    <main>
-      <!-- News section -->
-      <section id="news">
+            <div class="header__container container">
+    
+               <nav class="header__nav">
 
-        <div>
-            <hr>
-            <article class="title">  
-                <h2><i>Harris’s Debate Challenge: Pushing Ahead Without Leaving Biden Behind</i></h2>
-                <p>At Tuesday’s debate, Kamala Harris, the vice president, will try to promote herself as a change candidate without criticizing President Biden,
-                 whom she has served for years.</p>
-            </article>
-             <div class="image-block" style="color:#698b8f;">
-                <img src="src/post1img1.webp" alt="debate-photo" style="width: 100%;">
-                Advisers to Vice President Kamala Harris say she has introduced some policies that 
-                they hope will appeal to voters, and strike a subtle contrast with President 
-                Biden. Credit...Tierney L. Cross for The New York Times
-             </div>
-            
-            <div class="item-info" style="display: flex; max-height: 10em; margin: 10px;">
-                <div class="authors"></div>
-                <img src="src/author1.png" style="max-width: 3em; max-height: 3em; margin-right: 25px;" alt="author-image">
-                <h3>By <a href="#" style="color: #f5f6f7;" >Katie Rogers</a></h3>
+                    <div class="userinfo">
+                        <a href="#" class="userinfo__name">Client name</a>
+                    </div>
+
+                <ul class="header__menu">
+                    <li class="menu__item menu__item-actual"><a href="#">News</a></li>
+                    <li class="menu__item"><a href="#">Projects</a></li>
+                    <li class="menu__item"><a href="#">About</a></li>
+                    <li class="menu__item"><a href="#">Newsletter</a></li>
+
+                    <li class="menu__item">
+                        <label class="toggle-mode">
+                            <input type="checkbox" id="darkmode-toggle">
+                            <label for="darkmode-toggle"></label>
+                            <!-- <span class="slider"></span> -->
+                        </label>
+                    </li>
+                </ul>
+
+               </nav>
+
+               <div class="header__title">
+                    <h1>THE NEWS</h1>
+               </div>
             </div>
 
-            <article>
-                <h3>Debate Details</h3>
-                <p>
-                    Vice President Kamala Harris will try to use her debate on Tuesday against 
-                    former President Donald J. Trump to argue that Americans are ready to turn 
-                    the page on the politics of the past decade, with its turmoil and social animus.
-                </p>
-                <p>
-                    But Mr. Trump, standing just feet away, is likely to make a different case: 
-                    He is expected to try to paint Ms. Harris, the sitting vice president, as 
-                    the candidate of the status quo.
-                </p>
-                <p>
-                    The debate will pose a challenge for Ms. Harris, who will have to decide how much to embrace or distance 
-                    herself from President Biden and his policies at 
-                    a moment when polls show that many Americans are hungry for change. It is a conundrum other vice presidents have 
-                    faced while seeking the presidency, and Ms. Harris’s allies said she would have to tread carefully as she makes a case for herself.
-                </p>
-                <p>“She can praise Biden and talk about the accomplishments, but also acknowledge that the work is not done,” said Bakari Sellers, an ally 
-                    of Ms. Harris and a Democratic political commentator. “So she has to be willing 
-                    to display to the American people a level of empathy and understanding, and not simply say everything we did was God’s gift to politics.”
-                </p>
-            </article>
-            
-            <iframe width="900" height="500" src="https://www.youtube.com/embed/8LNbaDVTeKo?si=PXzZzCdgsTsCbA7V" title="YouTube video player" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </header>
 
-            <article>
-                <h3>Final Thoughts</h3>
-                <p>“She can praise Biden and talk about the accomplishments, but also acknowledge that the work is not done,” said Bakari Sellers, an ally 
-                    of Ms. Harris and a Democratic political commentator. “So she has to be willing 
-                    to display to the American people a level of empathy and understanding, and not simply say everything we did was God’s gift to politics.”
-                </p>
-            </article>
-            <hr>
-        </div>
+        <main class="main">
+            <div class="main__container container">
 
-      </section>
-    </main>
-    <!-- Footer -->
-      <footer>
-        <h3>© 2024 Nurislam Sheri SE-2325</h3>
-        <p>News That Matters, Delivered Daily</p>
-        <a href="./aboutus.html" style="color: #f5f6f7;">About us</a>
-        <hr>
-      </footer>
-      </div>
-     
+                <div class="wrapper-content">
+                    <div class="heading">
+                        <h2 class="heading__title title">
+                            Recent News
+                        </h2>
+                    </div>
+
+                    <section class="recent-news content">
+                        <div class="blog-post-card">
+    
+                            <div class="blog-post-card__content">
+                                <div class="content-img">
+                                    <img src="./img/recent1.jpg" alt="content image">
+                                </div>
+    
+                                <div class="content-info">
+                                    <span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span>
+                                </div>
+
+                                <div class="blog-post-card__title">
+                                    <a href="#" class="title__link">
+                                        <div class="title__container">
+                                            <h2 class="title">
+                                                UX review presentations
+                                            </h2>
+                                            <img src="./img/arrow-up-right.svg" alt="Check the post">
+                                        </div>
+                                    </a>
+                                </div>
+                                
+
+                                <div class="blog-post-card__subtitle">
+                                    <p class="subtile">
+                                        How do you create compelling presentations that wow your colleagues and impress your managers?
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="blog-column">
+                            <div class="blog-column__content">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nemo eveniet nulla 
+                                autem provident veniam sint placeat, ipsa voluptatum consectetur maxime? Eaque, 
+                                cum maxime architecto voluptate soluta autem odit dolore est culpa, fuga, ipsam 
+                                officia molestias sapiente nam iure fugit? Labore ab aliquam nulla eligendi at
+                                 vitae, saepe id debitis odit alias voluptates sed? Consequuntur recusandae 
+                                 obcaecati cum iusto eligendi optio corporis ipsa architecto unde! Officia 
+                                 expedita qui libero facilis, sequi inventore enim rerum nobis praesentium 
+                                 dolorem dolorum labore non beatae quis! Adipisci, asperiores molestias. Odio quas 
+                                 voluptatibus asperiores corporis natus adipisci. Eos libero aliquam blanditiis
+                                  laboriosam ex placeat asperiores!
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+
+            </div>
+        </main>
+
+
 </body>
 </html>

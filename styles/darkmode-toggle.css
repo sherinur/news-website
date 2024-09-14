@@ -1,0 +1,34 @@
+label.toggle-mode {
+    width: 96px;
+    height: 40px;
+    position: relative;
+    display: block;
+    background: #090D1F;
+    border-radius: 29px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label.toggle-mode:after {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    left: 10px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#darkmode-toggle:checked + label.toggle-mode:after {
+    left: calc(100% - 34px); 
+    background: #090D1F;
+}
