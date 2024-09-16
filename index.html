@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./styles/darkmode-toggle.css">
 </head>
 <body>
+
+    <div class="page">
+
         <header class="header">
 
             <div class="header__container container">
@@ -21,7 +24,7 @@
                     </div>
 
                 <ul class="header__menu">
-                    <li class="menu__item menu__item-actual"><a href="#">News</a></li>
+                    <li class="menu__item active"><a href="#">News</a></li>
                     <li class="menu__item"><a href="#">Projects</a></li>
                     <li class="menu__item"><a href="#">About</a></li>
                     <li class="menu__item"><a href="#">Newsletter</a></li>
@@ -48,13 +51,18 @@
             <div class="main__container container">
 
                 <div class="wrapper-content">
-                    <div class="heading">
-                        <h2 class="heading__title title">
-                            Recent News
-                        </h2>
-                    </div>
 
+                    <!-- Content of the Recent News -->
                     <section class="recent-news content">
+                        <div class="heading">
+                            <h2 class="heading__title title">
+                                Recent News
+                            </h2>
+                        </div>
+
+                        <div class="recent-news__wrapper">
+
+                            <!-- Content in card -->
                         <div class="blog-post-card">
     
                             <div class="blog-post-card__content">
@@ -83,31 +91,129 @@
                                         How do you create compelling presentations that wow your colleagues and impress your managers?
                                     </p>
                                 </div>
+
+                                <div class="blog-post-card__categories categories">
+                                    <a href="#" class="post-badge">Design</a>
+                                    <a href="#" class="post-badge">Research</a>
+                                    <a href="#" class="post-badge">Presentation</a>
+                                </div>
                             </div>
                             
                         </div>
                         
+                        <!-- Content in column
                         <div class="blog-column">
-                            <div class="blog-column__content">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero nemo eveniet nulla 
-                                autem provident veniam sint placeat, ipsa voluptatum consectetur maxime? Eaque, 
-                                cum maxime architecto voluptate soluta autem odit dolore est culpa, fuga, ipsam 
-                                officia molestias sapiente nam iure fugit? Labore ab aliquam nulla eligendi at
-                                 vitae, saepe id debitis odit alias voluptates sed? Consequuntur recusandae 
-                                 obcaecati cum iusto eligendi optio corporis ipsa architecto unde! Officia 
-                                 expedita qui libero facilis, sequi inventore enim rerum nobis praesentium 
-                                 dolorem dolorum labore non beatae quis! Adipisci, asperiores molestias. Odio quas 
-                                 voluptatibus asperiores corporis natus adipisci. Eos libero aliquam blanditiis
-                                  laboriosam ex placeat asperiores!
+                            <div class="blog-column__wrapper">
+                                <div class="column__item">
+                                    <div class="blog-post-card">
+    
+                                        <div class="blog-post-card__content">
+                                            <div class="content-img">
+                                                <img src="./img/recent2.jpg" alt="content image">
+                                            </div>
+
+                                            <div class="content-data">
+
+                                                <div class="content-info">
+                                                    <span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span>
+                                                </div>
+                
+                                                <div class="blog-post-card__title">
+                                                    <a href="#" class="title__link">
+                                                        <div class="title__container">
+                                                            <h2 class="title">
+                                                                Migrating to Linear 101                                                        
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                
+                                                <div class="blog-post-card__subtitle">
+                                                    <p class="subtile">
+                                                        Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...
+                                                    </p>
+                                                </div>
+                
+                                                <div class="blog-post-card__categories categories">
+                                                    <a href="#" class="post-badge">Design</a>
+                                                    <a href="#" class="post-badge">Research</a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="column__item">
+                                    <div class="blog-post-card">
+    
+                                        <div class="blog-post-card__content">
+                                            <div class="content-img">
+                                                <img src="./img/recent3.jpg" alt="content image">
+                                            </div>
+                
+                                            <div class="content-data">
+                                                <div class="content-info">
+                                                    <span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span>
+                                                </div>
+                
+                                                <div class="blog-post-card__title">
+                                                    <a href="#" class="title__link">
+                                                        <div class="title__container">
+                                                            <h2 class="title">
+                                                                Building your API Stack
+                                                            </h2>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                
+                
+                                                <div class="blog-post-card__subtitle">
+                                                    <p class="subtile">
+                                                        The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...
+                                                    </p>
+                                                </div>
+                
+                                                <div class="blog-post-card__categories categories">
+                                                    <a href="#" class="post-badge">Design</a>
+                                                    <a href="#" class="post-badge">Research</a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </div> -->
                     </section>
                 </div>
-                
-
             </div>
+                        
         </main>
 
+        <footer class="footer">
+            <div class="container">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, facere?
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, facere?
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, facere?
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, facere?
+                </div>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, facere?
+                </div>
+            </div>
+          
+
+        </footer>
+
+
+    </div>
 
 </body>
 </html>
