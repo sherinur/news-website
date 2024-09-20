@@ -72,7 +72,7 @@ a {
 }
 
 .header__title {
-    height: 295px;
+    margin-top: 70px;
     width: 100%;
     display: flex;
     justify-content: center;

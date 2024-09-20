@@ -14,7 +14,7 @@
 
 @media (min-width: 425px) {
     .header__title h1 {
-        font-size: 75px;
+        font-size: 80px;
     }
 }
 
@@ -26,17 +26,23 @@
 
 @media (min-width: 768px) {
     .header__title h1 {
-        font-size: 130px;
+        font-size: 135px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
     .header__title h1 {
         font-size: 180px;
     }
 }
 
 @media (min-width: 1200px) {
+    .header__title h1 {
+        font-size: 210px;
+    }
+}
+
+@media (min-width: 1400px) {
     .header__title h1 {
         font-size: 240px;
     }
