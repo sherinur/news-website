@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body {
+    font-family: 'Inter';
     color: #1A1A1A;
     background-color: #FFFFFF;
 }
@@ -21,16 +22,9 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: 1216px;
-    margin: 0 auto;
-    
-}
-
 .header {
     max-height: 465px;
     width: 100%;
-    padding: 30px 0 30px 0;
 }
 
 .header__nav {
@@ -42,16 +36,12 @@ a {
     grid-template-columns: 60% 40%;
 }
 
-.menu__item {
+.navbar {
     font-size: 20px;
     font-family: "Inter";
 }
 
-.menu__item.active {
-    font-weight: 700;
-    border-bottom: 2px solid #000;
-    transition: border-bottom 0.3s ease;
-}
+
 
 .menu__item a {
     text-decoration: none;
@@ -88,14 +78,13 @@ a {
     justify-content: center;
     align-items: center;
     width: 100%;
-
-    margin-top: 50px;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
 }
 
 .header__title h1 {
-    font-size: 243.5px;
+    font-size: 240px;
+    font-weight: bold;
     white-space: nowrap;
     margin: 0;
     box-sizing: border-box;
@@ -107,24 +96,6 @@ a {
     margin-bottom: 32px;
 }
 
-.title {
-    margin: 0;
-    color: #1A1A1A;
-    font-size: 24px;
-    font-family: "Inter";
-    font-weight:  600;
-}
-
-.content {
-    padding: 30px 0 30px 0;
-}
-
-.subtile {
-    font-size: 16px;
-    line-height: 20px;
-    
-    color: #667085;
-}
 
 .content-info {
     font-family: "Inter";
@@ -250,11 +221,6 @@ a.post-badge:hover {
 
 
 /* Footer */
-.footer {
-    box-sizing: border-box;
-    padding: 30px 112px 30px 112px;
-}
-
 .footer .menu-links {
     display: flex;
 }
@@ -264,11 +230,6 @@ a.post-badge:hover {
     font-size: 20px;
     display: flex;
 }
-
-.footer .menu-links li {
-    margin-left: 14px;
-}
-
 
 /* Banner */
 
@@ -325,4 +286,57 @@ a.post-badge:hover {
 
 .subtile.aligned {
     text-align: center;
+}
+
+
+/* After BOOTSTRAP */
+
+.nav-link.active {
+    font-weight: 700;
+    border-bottom: 2px solid #000;
+    transition: border-bottom 0.3s ease;
+}
+
+.horizontal-card {
+    max-width: 592px;
+    border: 0px;
+}
+
+.horizontal-card .card-body {
+    padding: 0 0 0 1.25rem;
+}
+
+.vertical-card {
+    max-width: 592px;
+    border: 0px;
+}
+.vertical-card .card-body {
+    padding: 1.25rem 0 0 0;
+}
+
+.card-text-subtitle {
+    font-family: 'Inter';
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #667085;
+}
+
+.card-text-title {
+    margin: 0;
+    color: #1A1A1A;
+    font-size: 24px;
+    font-family: "Inter";
+    font-weight:  600;
+}
+
+.banner {
+    max-height: 306px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%; /* Занимает 100% ширины родителя */
+    height: 300px; /* Задайте нужную высоту */
+    object-fit:fill; /* Сохраняет пропорции и обрезает, если необходимо */
 }
