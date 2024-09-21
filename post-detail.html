@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="News web-site">
+    <title>The News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/darkmode-toggle.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <header class="header">
+
+            <div class="header__container container">
+
+               <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container fixed-top bg-body py-3 px-4">
+                    <div class="navbar-brand userinfo">
+                        <a href="#" class="userinfo__name">Client name</a>
+                    </div>
+            
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Newsletter</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="darkmode-toggle">
+                                    <label class="toggle-mode">
+                                        <input type="checkbox" id="darkmode-toggle">
+                                        <label for="darkmode-toggle"></label>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+
+        </header>
+
+
+        <!-- SHOULD USE ORDER-MD -->
+        <main class="main">
+           <section class="detailed-post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row recent-title pb-4">
+                                <h2>Recent News</h2>
+                            </div>
+
+                            <div class="row">
+                                 <!-- vertical card -->
+                                <div class="col-12 mb-4">
+                                    
+                                    <div class="card vertical-card w-100">
+                                        <img src="./img/card1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-text-title">PM mental models</h5>
+                                            <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                        </div> 
+                                        <div class="card-body">
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- vertical card -->
+                                <div class="col-12 mb-4">
+                                    
+                                    <div class="card vertical-card w-100">
+                                        <img src="./img/card2.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-text-title">PM mental models</h5>
+                                            <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                        </div> 
+                                        <div class="card-body">
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- vertical card -->
+                                <div class="col-12 mb-4">
+                                    
+                                    <div class="card vertical-card w-100">
+                                        <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-text-title">PM mental models</h5>
+                                            <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                        </div> 
+                                        <div class="card-body">
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- vertical card -->
+                                <div class="col-12 mb-4">
+                                    
+                                    <div class="card vertical-card w-100">
+                                        <img src="./img/card4.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title card-text-title">PM mental models</h5>
+                                            <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                        </div> 
+                                        <div class="card-body">
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            </div>
+                        </div>
+                        <div class="col-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eum enim dolores repellendus delectus ab molestiae vitae laborum fugit maxime 
+                            aliquam itaque sunt facilis illo ea quas in laudantium, quidem magni ut, rerum, 
+                            asperiores recusandae nisi corrupti odio. Repudiandae facere vitae minima enim 
+                            ipsam neque obcaecati, numquam maiores cum quaerat quo est id recusandae itaque 
+                            nobis voluptatem odit similique excepturi quis placeat sit veritatis? Dolores, voluptates
+                             accusantium, qui rem laboriosam iusto sit voluptatem, non doloribus necessitatibus nisi 
+                             alias neque vero nemo! Molestias aperiam assumenda officia sapiente rerum, 
+                            labore odit suscipit quo eveniet incidunt quod, nam fuga distinctio debitis! Pariatur, consequatur cum.
+                        </div>
+                    </div>
+                </div>
+           </section>
+            
+        </main>
+        
+
+        <footer class="footer bg-body py-4" id="footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <span class="text-muted">© 2023 Sheri Nurislam</span>
+                    </div>
+                    <div class="col-auto">
+                        <ul class="list-unstyled d-flex mb-0">
+                            <li class="me-3"><a href="http://t.me/sherinur" target="_blank" class="text-decoration-none">Telegram</a></li>
+                            <li class="me-3"><a href="https://github.com/sherinur" target="_blank" class="text-decoration-none">LinkedIn</a></li>
+                            <li class="me-3"><a href="#" class="text-decoration-none">Email</a></li>
+                            <li class="me-3"><a href="#" class="text-decoration-none">Github</a></li>
+                            <li><a href="#" class="text-decoration-none">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

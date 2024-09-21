@@ -339,3 +339,7 @@ a.post-badge:hover {
     height: 300px; /* Задайте нужную высоту */
     object-fit:fill; /* Сохраняет пропорции и обрезает, если необходимо */
 }
+
+.navbar {
+    margin-bottom: 100px;
+}
