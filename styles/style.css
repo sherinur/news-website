@@ -41,7 +41,9 @@ a {
     font-family: "Inter";
 }
 
-
+.login-form {
+    flex-direction: column;
+}
 
 .menu__item a {
     text-decoration: none;
@@ -62,7 +64,10 @@ a {
 .userinfo {
     display: flex;
     align-items: center;
+}
 
+.hidden {
+    display: none;
 }
 
 .userinfo__name {
