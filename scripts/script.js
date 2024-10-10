@@ -78,7 +78,7 @@ function updateDateTime() {
     const formattedDateTime = now.toLocaleString('en-US', options);
 
     document.getElementById('date-time').textContent = `${formattedDateTime}`;
-}
+}   
 
 setInterval(updateDateTime, 1000);
 
@@ -92,7 +92,6 @@ openPopup.addEventListener('click', () => {
     popup.style.display = 'block';
     overlay.style.display = 'block';
 });
-
 
 closePopup.addEventListener('click', () => {
     popup.style.display = 'none';

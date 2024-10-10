@@ -192,6 +192,15 @@
                             <div class="col-12 mt-5">
                                 <button id="openPopup" class="btn btn-primary">Report an error</button>
                             </div>
+                        
+                            <div class="overlay" id="overlay"></div>
+                            <div class="popup" id="popup">
+                                <h2>Report an error</h2>
+                                <p>Notice a mistake? You can report, and we will fix it!</p>
+                                <textarea name="report-text" id="report-text" cols="30" rows="3" placeholder="I found that your facts is incorrect..."></textarea>
+                                <button id="report-submit" class="btn btn-success mt-3">Submit</button>
+                                <button id="closePopup" class="btn btn-danger mt-3">Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -221,16 +230,8 @@
             </div>
         </footer>
         
-
-        <div class="overlay" id="overlay"></div>
-        <div class="popup d-flex" id="popup">
-            <h2>Report an error</h2>
-            <p>Notice a mistake? You can report, and we will fix it!</p>
-            <textarea name="report-text" id="report-text" cols="30" rows="3" placeholder="I found that your facts is incorrect..."></textarea>
-            <button id="report-submit" class="btn btn-success mt-3">Submit</button>
-            <button id="closePopup" class="btn btn-danger mt-3">Close</button>
-        </div>
     </div>
+
     <script src="./scripts/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
