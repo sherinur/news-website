@@ -50,11 +50,15 @@ toggle.addEventListener('change', function() {
         card.classList.toggle('dark-mode');
     });
 
-    document.querySelectorAll('.card').forEach(card => {
-        card.classList.toggle('dark-mode');
+    document.querySelectorAll('.footer').forEach(footer => {
+        footer.classList.toggle('dark-mode');
     });
 
-    document.querySelectorAll('.btn-dark').forEach(card => {
-        card.classList.toggle('.btn-light');
+    document.querySelectorAll('.btn-dark').forEach(btnDark => {
+        btnDark.classList.toggle('btn-light');
+    });
+
+    document.querySelectorAll('.navbar').forEach(navbar => {
+        navbar.classList.toggle('dark-mode');
     });
 });

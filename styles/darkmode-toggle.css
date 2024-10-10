@@ -40,10 +40,6 @@ body.dark-mode {
     color: #ffffff;
 }
 
-.navbar-light.dark-mode .nav-link {
-    color: #ffffff;
-}
-
 .card.dark-mode {
     background-color: #090D1F;
 }
@@ -56,7 +52,16 @@ body.dark-mode {
     color: #C0C5D0;
 }
 
-.navbar.dark-mode {
+.footer.dark-mode {
+    color: #ffffff;
+    background-color: #090D1F;
+}
+
+.navbar.dark-mode, .navbar-light.dark-mode {
+    background-color: #090D1F;
     color: #ffffff;
 }
 
+.navbar.dark-mode .nav-link {
+    color: #ffffff;
+}
