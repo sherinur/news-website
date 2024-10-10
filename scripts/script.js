@@ -88,19 +88,17 @@ const closePopup = document.getElementById('closePopup');
 const popup = document.getElementById('popup');
 const overlay = document.getElementById('overlay');
 
-// Открыть поп-ап
 openPopup.addEventListener('click', () => {
     popup.style.display = 'block';
     overlay.style.display = 'block';
 });
 
-// Закрыть поп-ап
+
 closePopup.addEventListener('click', () => {
     popup.style.display = 'none';
     overlay.style.display = 'none';
 });
 
-// Закрыть поп-ап при клике на оверлей
 overlay.addEventListener('click', () => {
     popup.style.display = 'none';
     overlay.style.display = 'none';
