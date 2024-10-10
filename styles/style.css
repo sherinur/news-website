@@ -356,3 +356,41 @@ a.post-badge:hover {
 .card-body {
     padding: 0;
 }
+
+
+/* Accordion */
+.accordion {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    margin: 10px 0;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.accordion-header:hover {
+    background-color: #ddd;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fafafa;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+}
+
+.accordion-content p {
+    margin: 10px 0;
+}

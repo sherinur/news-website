@@ -1,6 +1,7 @@
 const adminLogin = "admin@example.com"
 const adminPassword = "admin"
 
+// Form Validation (login.html)
 function validateForm() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -17,10 +18,24 @@ function validateForm() {
         return false;
     }
 
-    if (email = adminLogin && adminPassword == password) {
-        alert("You have logged as Admin");
+    if (email === adminLogin) {
+        if (adminPassword === password) {
+            alert("You have logged as Admin");
+        } else {
+            errorMsg.textContent = "Uncorrect password for " + email;
+        }
     } else {
-        alert("You have logged as", email);
+        alert("You have logged as " + email);
     }
     return true; 
 }
+
+// FAQ (about.html)
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+        button.classList.toggle('active');
+    });
+});
