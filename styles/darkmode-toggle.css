@@ -14,21 +14,45 @@ label.toggle-mode:after {
     position: absolute;
     height: 24px;
     width: 24px;
-    top: 10px;
+    top: 8px;
     left: 10px;
     background: #FFFFFF;
-    border-radius: 20px;
+    border-radius: 50%;
     transition: 0.3s;
-    z-index: 1;
 }
 
 #darkmode-toggle {
-    width: 0;
-    height: 0;
-    visibility: hidden;
+    display: none;
+}
+
+#darkmode-toggle:checked + label.toggle-mode {
+    background: #ffffff; /* Меняем цвет фона при активации */
 }
 
 #darkmode-toggle:checked + label.toggle-mode:after {
     left: calc(100% - 34px); 
     background: #090D1F;
+}
+
+/* Toggle styles */
+
+body.dark-mode {
+    background-color: #090D1F;
+    color: #ffffff;
+}
+
+.navbar-light.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+.card.dark-mode {
+    background-color: #090D1F;
+}
+
+.card.dark-mode .card-text-title {
+    color: #FFFFFF;
+}
+
+.card.dark-mode .card-text-subtitle {
+    color: #C0C5D0;
 }

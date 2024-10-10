@@ -39,3 +39,14 @@ document.querySelectorAll('.accordion-header').forEach(button => {
         button.classList.toggle('active');
     });
 });
+
+
+// Darkmode Toggle (everywhere)
+const toggle = document.getElementById('darkmode-toggle');
+toggle.addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode');
+
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.toggle('dark-mode');
+    });
+});
