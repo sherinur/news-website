@@ -66,22 +66,42 @@ toggle.addEventListener('change', function() {
 function updateDateTime() {
     const now = new Date();
 
-    // Опции для форматирования даты и времени
     const options = {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
-        hour12: true // Для 12-часового формата времени
+        hour12: true
     };
 
-    // Получаем форматированную строку даты и времени
     const formattedDateTime = now.toLocaleString('en-US', options);
 
-    // Обновляем содержимое блока на странице
     document.getElementById('date-time').textContent = `${formattedDateTime}`;
 }
 
-// Обновляем каждые 1000 миллисекунд (1 секунда)
 setInterval(updateDateTime, 1000);
+
+// Pop up (post-detail.html)
+const openPopup = document.getElementById('openPopup');
+const closePopup = document.getElementById('closePopup');
+const popup = document.getElementById('popup');
+const overlay = document.getElementById('overlay');
+
+// Открыть поп-ап
+openPopup.addEventListener('click', () => {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+});
+
+// Закрыть поп-ап
+closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+});
+
+// Закрыть поп-ап при клике на оверлей
+overlay.addEventListener('click', () => {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+});

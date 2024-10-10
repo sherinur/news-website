@@ -1,330 +1,330 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="News web-site">
-    <title>The News</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/darkmode-toggle.css">
-    <link rel="stylesheet" href="./styles/mediaqueries.css">
-</head>
-<body>
-    <div class="page">
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="News web-site">
+        <title>The News</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/darkmode-toggle.css">
+        <link rel="stylesheet" href="./styles/mediaqueries.css">
+    </head>
+    <body>
+        <div class="page">
 
-        <header class="header">
+            <header class="header">
 
-            <div class="header__container container">
+                <div class="header__container container">
 
-               <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container fixed-top bg-body py-3 px-4">
-                    <div class="navbar-brand userinfo">
-                        <a href="#" class="userinfo__name hidden">Client name</a>
-                        <a href="./login.html" class="userinfo__login btn btn-dark">Log in</a>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container fixed-top bg-body py-3 px-4">
+                        <div class="navbar-brand userinfo">
+                            <a href="#" class="userinfo__name hidden">Client name</a>
+                            <a href="./login.html" class="userinfo__login btn btn-dark">Log in</a>
+                        </div>
+                
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item d-flex align-items-center" style="padding-right: 50px;">
+                                    <div id="date-time"></div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./projects.html">Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Newsletter</a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="darkmode-toggle">
+                                        <label class="toggle-mode" for="darkmode-toggle">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                    
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                </nav>
+                <div class="header__title">
+                        <h1>THE BLOG</h1>
+                </div>
+                </div>
+
+            </header>
+            <main class="main">
+                <section class="recent-section">
+                    <div class="container py-4">
+                        <div class="row recent-title pb-4">
+                            <h2>Recent News</h2>
+                        </div>
             
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-            
-                    <div class="collapse navbar-collapse" id="navbarContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item d-flex align-items-center" style="padding-right: 50px;">
-                                <div id="date-time"></div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">News</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./projects.html">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Newsletter</a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="darkmode-toggle">
-                                    <label class="toggle-mode" for="darkmode-toggle">
-                                        <span class="slider"></span>
-                                    </label>
+                        <div class="row recent-content">
+                            <div class="col-12 col-lg-6 col-md-12 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <a href="./post-detail.html">
+                                        <img src="./img/recent1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <h5 class="card-title card-text-title">Card title</h5>
+                                        <p class="card-text card-text-subtitle mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#footer" class="card-link post-badge">Leadership</a>
+                                        <a href="#" class="card-link post-badge">Design</a>
+                                    </div> 
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 col-md-12 mb-4">
+                                <div class="card mb-3">
+                                    <div class="row g-0 p-xs-1">
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="./img/recent2.jpg" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 ps-lg-3 ps-md-0 ps-sm-3">
+                                        <div class="card-body">
+                                            <!-- MARGIN TOP TO FIX -->
+                                            <p class="card-text mt-xs-3"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <h5 class="card-title card-text-title mb-2">Card title</h5>
+                                            <p class="card-text card-text-subtitle">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                
+                                <div class="card mb-3">
+                                    <div class="row g-0 p-xs-1">
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="./img/recent3.jpg" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 ps-lg-3 ps-md-0 ps-sm-3">
+                                        <div class="card-body p-xs-5">
+                                            <!-- MARGIN TOP TO FIX -->
+                                            <p class="card-text mt-xs-5"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                            <h5 class="card-title card-text-title mb-2">Card title</h5>
+                                            <p class="card-text card-text-subtitle">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            <a href="#" class="card-link post-badge">Card link</a>
+                                            <a href="#" class="card-link post-badge">Another link</a>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                                 
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </nav>
-               <div class="header__title">
-                    <h1>THE BLOG</h1>
-               </div>
-            </div>
+                </section>
 
-        </header>
-        <main class="main">
-            <section class="recent-section">
-                <div class="container py-4">
-                    <div class="row recent-title pb-4">
-                        <h2>Recent News</h2>
-                    </div>
-        
-                    <div class="row recent-content">
-                        <div class="col-12 col-lg-6 col-md-12 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <a href="./post-detail.html">
-                                    <img src="./img/recent1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <h5 class="card-title card-text-title">Card title</h5>
-                                    <p class="card-text card-text-subtitle mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#footer" class="card-link post-badge">Leadership</a>
-                                    <a href="#" class="card-link post-badge">Design</a>
-                                </div> 
-                                </a>
+                <!-- Carousel -->
+                <section class="section-carousel">
+                    <div class="container">
+
+                        <div class="row">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="#">
+                                        <img src="./img/banner1.jpg" class="d-block w-100" alt="...">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#">
+                                        <img src="./img/banner2.jpg" class="d-block w-100" alt="...">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="#">
+                                        <img src="./img/banner3.jpg" class="d-block w-100" alt="...">
+                                    </a>
+                                </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-6 col-md-12 mb-4">
-                            <div class="card mb-3">
-                                <div class="row g-0 p-xs-1">
-                                  <div class="col-md-6 col-sm-6">
-                                    <img src="./img/recent2.jpg" class="img-fluid rounded-start" alt="...">
-                                  </div>
-                                  <div class="col-md-6 col-sm-6 ps-lg-3 ps-md-0 ps-sm-3">
+                    </div>
+                </section>
+
+                <!-- All posts -->
+                <section class="posts pt-5">
+                    <div class="container">
+                        <div class="row recent-title pb-4">
+                            <h2>All news posts</h2>
+                        </div>
+                        
+                        <div class="row">
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card1.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <!-- MARGIN TOP TO FIX -->
-                                        <p class="card-text mt-xs-3"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <h5 class="card-title card-text-title mb-2">Card title</h5>
-                                        <p class="card-text card-text-subtitle">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                                    </div> 
+                                    <div class="card-body">
                                         <a href="#" class="card-link post-badge">Card link</a>
                                         <a href="#" class="card-link post-badge">Another link</a>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
+                            </div>
 
-                              
-                              <div class="card mb-3">
-                                <div class="row g-0 p-xs-1">
-                                  <div class="col-md-6 col-sm-6">
-                                    <img src="./img/recent3.jpg" class="img-fluid rounded-start" alt="...">
-                                  </div>
-                                  <div class="col-md-6 col-sm-6 ps-lg-3 ps-md-0 ps-sm-3">
-                                    <div class="card-body p-xs-5">
-                                        <!-- MARGIN TOP TO FIX -->
-                                        <p class="card-text mt-xs-5"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <h5 class="card-title card-text-title mb-2">Card title</h5>
-                                        <p class="card-text card-text-subtitle">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card2.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                    </div> 
+                                    <div class="card-body">
                                         <a href="#" class="card-link post-badge">Card link</a>
                                         <a href="#" class="card-link post-badge">Another link</a>
                                     </div>
-                                  </div>
                                 </div>
-                              </div>
-                              
+                            </div>
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Card link</a>
+                                        <a href="#" class="card-link post-badge">Another link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Card link</a>
+                                        <a href="#" class="card-link post-badge">Another link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card1.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Card link</a>
+                                        <a href="#" class="card-link post-badge">Another link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Card link</a>
+                                        <a href="#" class="card-link post-badge">Another link</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4">
+                                
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Card link</a>
+                                        <a href="#" class="card-link post-badge">Another link</a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Carousel -->
-            <section class="section-carousel">
-                <div class="container">
-
-                    <div class="row">
-                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <a href="#">
-                                    <img src="./img/banner1.jpg" class="d-block w-100" alt="...">
-                                </a>
-                              </div>
-                              <div class="carousel-item">
-                                <a href="#">
-                                    <img src="./img/banner2.jpg" class="d-block w-100" alt="...">
-                                </a>
-                              </div>
-                              <div class="carousel-item">
-                                <a href="#">
-                                    <img src="./img/banner3.jpg" class="d-block w-100" alt="...">
-                                </a>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- All posts -->
-            <section class="posts pt-5">
-                <div class="container">
-                    <div class="row recent-title pb-4">
-                        <h2>All news posts</h2>
-                    </div>
-                    
-                    <div class="row">
-                        <!-- vertical card -->
-                        <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-                         <!-- vertical card -->
-                         <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">PM mental models</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- vertical card -->
-                        <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-                         <!-- vertical card -->
-                         <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">What is Wireframing?</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- vertical card -->
-                        <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-                         <!-- vertical card -->
-                         <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">What is Wireframing?</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-
-                         <!-- vertical card -->
-                         <div class="col-12 col-lg-4 col-md-6 mb-4">
-                            
-                            <div class="card vertical-card w-100">
-                                <img src="./img/card3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title card-text-title">What is Wireframing?</h5>
-                                    <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                    <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div> 
-                                <div class="card-body">
-                                    <a href="#" class="card-link post-badge">Card link</a>
-                                    <a href="#" class="card-link post-badge">Another link</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+                </section>
+                
+            </main>
             
-        </main>
-        
 
-        <footer class="footer bg-body py-4" id="footer">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-auto">
-                        <span class="text-muted">© 2023 Sheri Nurislam</span>
-                    </div>
-                    <div class="col-auto">
-                        <ul class="list-unstyled d-flex mb-0">
-                            <li class="me-3"><a href="http://t.me/sherinur" target="_blank" class="text-decoration-none">Telegram</a></li>
-                            <li class="me-3"><a href="https://github.com/sherinur" target="_blank" class="text-decoration-none">LinkedIn</a></li>
-                            <li class="me-3"><a href="#" class="text-decoration-none">Email</a></li>
-                            <li class="me-3"><a href="#" class="text-decoration-none">Github</a></li>
-                            <li><a href="#" class="text-decoration-none">Instagram</a></li>
-                        </ul>
+            <footer class="footer bg-body py-4" id="footer">
+                <div class="container">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-auto">
+                            <span class="text-muted">© 2023 Sheri Nurislam</span>
+                        </div>
+                        <div class="col-auto">
+                            <ul class="list-unstyled d-flex mb-0">
+                                <li class="me-3"><a href="http://t.me/sherinur" target="_blank" class="text-decoration-none">Telegram</a></li>
+                                <li class="me-3"><a href="https://github.com/sherinur" target="_blank" class="text-decoration-none">LinkedIn</a></li>
+                                <li class="me-3"><a href="#" class="text-decoration-none">Email</a></li>
+                                <li class="me-3"><a href="#" class="text-decoration-none">Github</a></li>
+                                <li><a href="#" class="text-decoration-none">Instagram</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        
+            </footer>
+            
 
 
-    </div>
-<script src="./scripts/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
+        </div>
+    <script src="./scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    </html>
