@@ -62,3 +62,26 @@ toggle.addEventListener('change', function() {
         navbar.classList.toggle('dark-mode');
     });
 });
+
+function updateDateTime() {
+    const now = new Date();
+
+    // Опции для форматирования даты и времени
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true // Для 12-часового формата времени
+    };
+
+    // Получаем форматированную строку даты и времени
+    const formattedDateTime = now.toLocaleString('en-US', options);
+
+    // Обновляем содержимое блока на странице
+    document.getElementById('date-time').textContent = `${formattedDateTime}`;
+}
+
+// Обновляем каждые 1000 миллисекунд (1 секунда)
+setInterval(updateDateTime, 1000);
