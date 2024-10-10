@@ -26,15 +26,14 @@ label.toggle-mode:after {
 }
 
 #darkmode-toggle:checked + label.toggle-mode {
-    background: #ffffff; /* Меняем цвет фона при активации */
+    background: #ffffff;
 }
 
 #darkmode-toggle:checked + label.toggle-mode:after {
     left: calc(100% - 34px); 
     background: #090D1F;
 }
-
-/* Toggle styles */
+/* toggle styles */
 
 body.dark-mode {
     background-color: #090D1F;
@@ -56,3 +55,8 @@ body.dark-mode {
 .card.dark-mode .card-text-subtitle {
     color: #C0C5D0;
 }
+
+.navbar.dark-mode {
+    color: #ffffff;
+}
+

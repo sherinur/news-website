@@ -49,4 +49,12 @@ toggle.addEventListener('change', function() {
     document.querySelectorAll('.card').forEach(card => {
         card.classList.toggle('dark-mode');
     });
+
+    document.querySelectorAll('.card').forEach(card => {
+        card.classList.toggle('dark-mode');
+    });
+
+    document.querySelectorAll('.btn-dark').forEach(card => {
+        card.classList.toggle('.btn-light');
+    });
 });
