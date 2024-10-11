@@ -65,3 +65,45 @@ body.dark-mode {
 .navbar.dark-mode .nav-link {
     color: #ffffff;
 }
+
+.dark-mode {
+    background-color: #090D1F;
+    color: #ffffff;
+}
+
+.navbar.dark-mode {
+    background-color: #090D1F;
+    color: #ffffff;
+}
+
+.navbar.dark-mode .nav-link {
+    color: #ffffff;
+}
+
+body.dark-mode .header__title  {
+    border-top: 1px solid #ffffff;;
+    border-bottom: 1px solid #ffffff;;
+}
+
+.btn-dark.dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.card.dark-mode {
+    background-color: #090D1F;
+    color: #ffffff;
+}
+
+.footer.dark-mode {
+    background-color: #090D1F;
+    color: #ffffff;
+}
+
+.footer.dark-mode a {
+    color: #ffffff;
+}
+
+.footer.dark-mode span {
+    color: #ffffff;
+}
