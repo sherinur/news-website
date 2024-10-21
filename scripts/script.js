@@ -85,23 +85,36 @@ function updateDateTime() {
 
 setInterval(updateDateTime, 1000);
 
-// Pop up (post-detail.html)
-const openPopup = document.getElementById('openPopup');
-const closePopup = document.getElementById('closePopup');
-const popup = document.getElementById('popup');
-const overlay = document.getElementById('overlay');
+// ! Assignment 5
 
-openPopup.addEventListener('click', () => {
-    popup.style.display = 'block';
-    overlay.style.display = 'block';
-});
+// title h1 text changing 
+function startTextRotation() {
+    let index = 0;
+    const texts = ['THE BLOG', 'THE NEWS', "WHAT'S NEW", 'NEW INFO'];
 
-closePopup.addEventListener('click', () => {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-});
+    function changeText() {
+        const textElement = document.querySelector('#header-title');
+        textElement.textContent = texts[index];
+        index = (index + 1) % texts.length;
+    }
 
-overlay.addEventListener('click', () => {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-});
+    changeText();
+    setInterval(changeText, 10000);
+}
+
+document.addEventListener('DOMContentLoaded', startTextRotation);
+
+
+// clear all buttons (Event Listeners on Buttons)
+
+function clearLogin() {
+    document.getElementById('clearBtn').addEventListener('click', function() {
+        document.querySelectorAll('#myForm input').forEach(input => {
+            if (input.type === 'email' || input.type === 'password' || input.type === 'text') {
+                input.value = '';
+            }
+        });
+    });
+}
+
+clearLogin();
