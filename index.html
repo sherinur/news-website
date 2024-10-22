@@ -30,21 +30,18 @@
                 
                         <div class="collapse navbar-collapse" id="navbarContent">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item d-flex align-items-center" style="padding-right: 50px;">
-                                    <div id="date-time"></div>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./index.html" tabindex="0">News</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="./index.html">News</a>
+                                    <a class="nav-link" href="./projects.html" tabindex="0">Projects</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./projects.html">Projects</a>
+                                    <a class="nav-link" href="./about.html" tabindex="0">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Newsletter</a>
-                                </li>
+                                    <a class="nav-link" href="#" tabindex="0">Newsletter</a>
+                                </li>                                
                                 <li class="nav-item">
                                     <div class="form-check form-switch">
                                         <input class="form-check-input" type="checkbox" id="darkmode-toggle">
@@ -174,11 +171,18 @@
                         <div class="row recent-title pb-4">
                             <h2>All news posts</h2>
                         </div>
-                        
+                        <div class="col-12 pb-4">
+                            <button type="button" class="btn btn-info" data-filter="Design">Design</button>
+                            <button type="button" class="btn btn-info" data-filter="Science">Science</button>
+                            <button type="button" class="btn btn-info" data-filter="Interview">Interview</button>
+                            <button type="button" class="btn btn-info" data-filter="Courses">Courses</button>
+                            <button type="button" class="btn btn-info" data-filter="Study">Study</button>
+                            <button type="button" class="btn btn-info" data-filter="Project">Project</button>
+                        </div>
+                
                         <div class="row">
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Science,Interview">
                                 <div class="card vertical-card w-100">
                                     <img src="./img/card1.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -187,15 +191,14 @@
                                         <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Science</a>
+                                        <a href="#" class="card-link post-badge">Interview</a>
                                     </div>
                                 </div>
                             </div>
-
+                
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Design,Science">
                                 <div class="card vertical-card w-100">
                                     <img src="./img/card2.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
@@ -204,100 +207,95 @@
                                         <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Design</a>
+                                        <a href="#" class="card-link post-badge">Science</a>
                                     </div>
                                 </div>
                             </div>
+                
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
-                                <div class="card vertical-card w-100">
-                                    <img src="./img/card1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
-                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
-                                    </div> 
-                                    <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Design,Science">
                                 <div class="card vertical-card w-100">
                                     <img src="./img/card3.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
                                         <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Design</a>
+                                        <a href="#" class="card-link post-badge">Science</a>
                                     </div>
                                 </div>
                             </div>
-
+                
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Design,Science">
                                 <div class="card vertical-card w-100">
-                                    <img src="./img/card1.jpg" class="card-img-top" alt="...">
+                                    <img src="./img/card4.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title card-text-title">Bill Walsh leadership lessons</h5>
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
                                         <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <p class="card-text card-text-subtitle">Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Design</a>
+                                        <a href="#" class="card-link post-badge">Science</a>
                                     </div>
                                 </div>
                             </div>
-
+                
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Project,Study">
                                 <div class="card vertical-card w-100">
-                                    <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                    <img src="./img/card5.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
                                         <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Project</a>
+                                        <a href="#" class="card-link post-badge">Study</a>
                                     </div>
                                 </div>
                             </div>
-
-
+                
                             <!-- vertical card -->
-                            <div class="col-12 col-lg-4 col-md-6 mb-4">
-                                
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Courses,Study">
                                 <div class="card vertical-card w-100">
-                                    <img src="./img/card3.jpg" class="card-img-top" alt="...">
+                                    <img src="./img/card6.jpg" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title card-text-title">What is Wireframing?</h5>
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
                                         <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
-                                        <p class="card-text card-text-subtitle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
                                     </div> 
                                     <div class="card-body">
-                                        <a href="#" class="card-link post-badge">Card link</a>
-                                        <a href="#" class="card-link post-badge">Another link</a>
+                                        <a href="#" class="card-link post-badge">Courses</a>
+                                        <a href="#" class="card-link post-badge">Study</a>
                                     </div>
                                 </div>
                             </div>
-
+                
+                            <!-- vertical card -->
+                            <div class="col-12 col-lg-4 col-md-6 mb-4 card-container" data-categories="Courses,Study">
+                                <div class="card vertical-card w-100">
+                                    <img src="./img/card7.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title card-text-title">PM mental models</h5>
+                                        <p class="card-text"><small class="text-body-secondary"><span class="content-author">Olivia Rhye</span> • <span class="content-date">1 Jan 2023</span></small></p>
+                                        <p class="card-text card-text-subtitle">Mental models are simple expressions of complex processes or relationships.</p>
+                                    </div> 
+                                    <div class="card-body">
+                                        <a href="#" class="card-link post-badge">Course</a>
+                                        <a href="#" class="card-link post-badge">Study</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+                
                 
             </main>
             

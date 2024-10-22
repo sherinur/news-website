@@ -78,25 +78,6 @@ toggle.addEventListener('change', function() {
 });
 
 
-function updateDateTime() {
-    const now = new Date();
-
-    const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true
-    };
-
-    const formattedDateTime = now.toLocaleString('en-US', options);
-
-    document.getElementById('date-time').textContent = `${formattedDateTime}`;
-}   
-
-setInterval(updateDateTime, 1000);
-
 // ! Assignment 5
 
 // title h1 text changing 
@@ -139,20 +120,86 @@ function clearLogin() {
 
 clearLogin();
 
-// Manipulating Attributes
 function toggleReadMore() {
     const toggleBtn = document.getElementById("toggleBtn");
     const moreContent = document.querySelector(".more-content");
 
-    toggleBtn.addEventListener("click", function () {
-        if (moreContent.style.display === "none") {
-            moreContent.style.display = "inline";
-            toggleBtn.textContent = "Read Less";
-        } else {
-            moreContent.style.display = "none";
-            toggleBtn.textContent = "Read More";
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", function () {
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "inline";
+                toggleBtn.textContent = "Read Less";
+            } else {
+                moreContent.style.display = "none";
+                toggleBtn.textContent = "Read More";
+            }
+        });
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", toggleReadMore);
+
+// Keyboard Event Handling
+function HandleKeyboard() {
+    document.addEventListener('keydown', function(event) {
+        const menuItems = document.querySelectorAll('.navbar-nav .nav-link');
+        let currentIndex = -1;
+    
+    
+        for (let i = 0; i < menuItems.length; i++) {
+            if (menuItems[i] === document.activeElement) {
+                currentIndex = i;
+                break;
+            }
+        }
+    
+        if (event.key === 'ArrowRight' && currentIndex < menuItems.length - 1) {
+            menuItems[currentIndex + 1].focus();
+        } else if (event.key === 'ArrowLeft' && currentIndex > 0) {
+            menuItems[currentIndex - 1].focus();
+        }
+    });   
+}
+
+HandleKeyboard();
+
+// Switch Statements
+function PostsFilterHandle() {
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll('.btn-info');
+        const posts = document.querySelectorAll('.card-container');
+        const activeFilters = new Set();
+    
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const filter = this.getAttribute('data-filter');
+                
+                if (activeFilters.has(filter)) {
+                    activeFilters.delete(filter);
+                    this.classList.remove('active');
+                } else {
+                    activeFilters.add(filter);
+                    this.classList.add('active');
+                }
+    
+                filterPosts();
+            });
+        });
+    
+        function filterPosts() {
+            posts.forEach(post => {
+                const badges = Array.from(post.querySelectorAll('.post-badge')).map(badge => badge.textContent.trim());
+                const isVisible = [...activeFilters].every(filter => badges.includes(filter));
+    
+                if (activeFilters.size === 0 || isVisible) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
         }
     });
 }
 
-document.addEventListener("DOMContentLoaded", toggleReadMore);
+PostsFilterHandle();
