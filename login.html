@@ -72,21 +72,21 @@
                     <div class="row">
                         <div class="login-form col-12 d-flex align-items-center justify-content-center flex-direction-column">
                             <h2 class="pb-3">Log in to your account</h2>
-                            <form id="myForm" action="#" method="post" onsubmit="return validateForm()">
+                            <form id="myForm" action="#" method="post">
                                 <label for="email">Email:</label>
-                                <input type="email" id="email" name="email"><br><br>
-
+                                <input type="email" id="email" name="email" required><br><br>
+            
                                 <label for="password">Password:</label>
-                                <input type="password" id="password" name="password"><br><br>
-                                <input type="submit" value="Submit"  class="btn btn-primary">
-                                <input type="button" value="Clear"  class="btn btn-secondary" id="clearBtn">
+                                <input type="password" id="password" name="password" required><br><br>
+            
+                                <input type="submit" value="Submit" class="btn btn-primary">
+                                <input type="button" value="Clear" class="btn btn-secondary" id="clearBtn">
                             </form>
-                        
+            
                             <p class="pt-4" id="errorMsg" style="color:red;"></p>
+                            <p class="pt-4" id="successMsg" style="color:green; display:none;">Form submitted successfully!</p>
                         </div>
                     </div>
-                   
-                   
                 </div>
             </section>
             

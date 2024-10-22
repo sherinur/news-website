@@ -1,46 +1,76 @@
 const adminLogin = "admin@example.com"
 const adminPassword = "admin"
 
-// Form Validation (login.html)
 function validateForm() {
     const emailElement = document.getElementById("email");
     const passwordElement = document.getElementById("password");
-    const email = emailElement.value;
-    const password = passwordElement.value;
+    const email = emailElement.value.trim();
+    const password = passwordElement.value.trim();
     const errorMsg = document.getElementById("errorMsg");
     
-    // Dynamic Style Changes 1
-    if (password === "" || email === "") {
+    resetStyles(emailElement);
+    resetStyles(passwordElement);
+    errorMsg.textContent = "";
+
+    if (email === "" || password === "") {
         errorMsg.textContent = "All fields must be filled out";
-    
-        if (password === "") {
-            passwordElement.style.backgroundColor = "#d36b6b";
-        }
-    
+        
         if (email === "") {
-            emailElement.style.backgroundColor = "#d36b6b";
+            applyErrorStyle(emailElement);
+        }
+        if (password === "") {
+            applyErrorStyle(passwordElement);
         }
         return false;
     }
-    
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(email)) {
         errorMsg.textContent = "Please enter a valid email address";
+        applyErrorStyle(emailElement);
         return false;
     }
 
     if (email === adminLogin) {
-        if (adminPassword === password) {
-            alert("You have logged as Admin");
+        if (password === adminPassword) {
+            alert("You have logged in as Admin");
         } else {
-            errorMsg.textContent = "Uncorrect password for " + email;
+            errorMsg.textContent = "Incorrect password for " + email;
+            applyErrorStyle(passwordElement);
+            return false;
         }
     } else {
-        alert("You have logged as " + email);
+        alert("You have logged in as " + email);
     }
+
     return true; 
 }
+
+validateForm();
+
+// Функция для сброса стилей поля
+function resetStyles(element) {
+    element.style.backgroundColor = "";
+    element.style.border = "";
+}
+
+// Функция для применения стиля ошибки
+function applyErrorStyle(element) {
+    element.style.backgroundColor = "#d36b6b";
+    element.style.border = "1px solid #a00";
+}
+
+// Очистка сообщения об ошибке при изменении значений в полях
+document.getElementById("email").addEventListener("input", function() {
+    resetStyles(this);
+    document.getElementById("errorMsg").textContent = "";
+});
+
+document.getElementById("password").addEventListener("input", function() {
+    resetStyles(this);
+    document.getElementById("errorMsg").textContent = "";
+});
+
 
 // FAQ (about.html)
 document.querySelectorAll('.accordion-header').forEach(button => {
@@ -54,6 +84,7 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 
 
 // Darkmode Toggle (everywhere)
+// Animations
 const toggle = document.getElementById('darkmode-toggle');
 
 toggle.addEventListener('change', function() {
@@ -203,3 +234,13 @@ function PostsFilterHandle() {
 }
 
 PostsFilterHandle();
+
+// Play Sounds
+function ToggleSound() {
+    document.getElementById('darkmode-toggle').addEventListener('click', function() {
+        var audio = new Audio('./bell.mp3');
+        audio.play();
+    });
+}
+
+ToggleSound();
