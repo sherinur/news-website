@@ -1,26 +1,54 @@
-const adminLogin = "admin@example.com"
-const adminPassword = "admin"
+const adminLogin = "admin@example.com";
+const adminPassword = "admin";
 
+document.addEventListener("DOMContentLoaded", function() {
+    checkUserSession();
+
+    const loginForm = document.getElementById("myForm");
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            validateForm();
+        });
+    }
+
+    const logoutButton = document.querySelector(".userinfo__logout");
+    if (logoutButton) {
+        logoutButton.addEventListener("click", logout);
+    }
+});
+
+// Проверка сессии пользователя при загрузке страницы
+function checkUserSession() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (isLoggedIn === "true" && userEmail) {
+        updateUIForLoggedInUser(userEmail);
+    } else {
+        updateUIForLoggedOutUser();
+    }
+}
+
+// Функция для проверки формы и входа
 function validateForm() {
     const emailElement = document.getElementById("email");
     const passwordElement = document.getElementById("password");
+    const errorMsg = document.getElementById("errorMsg");
+
+    if (!emailElement || !passwordElement || !errorMsg) return;
+
     const email = emailElement.value.trim();
     const password = passwordElement.value.trim();
-    const errorMsg = document.getElementById("errorMsg");
-    
+
     resetStyles(emailElement);
     resetStyles(passwordElement);
     errorMsg.textContent = "";
 
     if (email === "" || password === "") {
         errorMsg.textContent = "All fields must be filled out";
-        
-        if (email === "") {
-            applyErrorStyle(emailElement);
-        }
-        if (password === "") {
-            applyErrorStyle(passwordElement);
-        }
+        if (email === "") applyErrorStyle(emailElement);
+        if (password === "") applyErrorStyle(passwordElement);
         return false;
     }
 
@@ -31,46 +59,100 @@ function validateForm() {
         return false;
     }
 
-    if (email === adminLogin) {
-        if (password === adminPassword) {
-            alert("You have logged in as Admin");
-        } else {
-            errorMsg.textContent = "Incorrect password for " + email;
-            applyErrorStyle(passwordElement);
-            return false;
-        }
+    if (email === adminLogin && password === adminPassword) {
+        alert("You have logged in as Admin");
+        saveUserSession(email); // Сохраняем сессию
+        updateUIForLoggedInUser(email);
     } else {
-        alert("You have logged in as " + email);
+        errorMsg.textContent = "Incorrect email or password";
+        applyErrorStyle(passwordElement);
+        return false;
     }
 
-    return true; 
+    return true;
 }
 
-validateForm();
+// Сохранение информации о пользователе в localStorage
+function saveUserSession(email) {
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userEmail", email);
+}
 
-// Функция для сброса стилей поля
+// Функция для обновления интерфейса после входа
+function updateUIForLoggedInUser(email) {
+    const userName = document.querySelector(".userinfo__name");
+    const loginButton = document.querySelector(".userinfo__login");
+    const logoutButton = document.querySelector(".userinfo__logout");
+
+    if (userName) {
+        userName.textContent = email;
+        userName.classList.remove("hidden");
+    }
+    if (loginButton) {
+        loginButton.classList.add("hidden");
+    }
+    if (logoutButton) {
+        logoutButton.classList.remove("hidden");
+    }
+}
+
+// Функция для обновления интерфейса после выхода
+function updateUIForLoggedOutUser() {
+    const userName = document.querySelector(".userinfo__name");
+    const loginButton = document.querySelector(".userinfo__login");
+    const logoutButton = document.querySelector(".userinfo__logout");
+
+    if (userName) {
+        userName.textContent = "Client name";
+        userName.classList.add("hidden");
+    }
+    if (loginButton) {
+        loginButton.classList.remove("hidden");
+    }
+    if (logoutButton) {
+        logoutButton.classList.add("hidden");
+    }
+}
+
+// Выход из системы
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userEmail");
+    alert("You have been logged out.");
+    updateUIForLoggedOutUser();
+}
+
+// Сброс стилей поля
 function resetStyles(element) {
     element.style.backgroundColor = "";
     element.style.border = "";
 }
 
-// Функция для применения стиля ошибки
+// Применение стиля ошибки
 function applyErrorStyle(element) {
     element.style.backgroundColor = "#d36b6b";
     element.style.border = "1px solid #a00";
 }
 
 // Очистка сообщения об ошибке при изменении значений в полях
-document.getElementById("email").addEventListener("input", function() {
-    resetStyles(this);
-    document.getElementById("errorMsg").textContent = "";
-});
+function resetLoginInputs() {
+    const emailElement = document.getElementById("email");
+    const passwordElement = document.getElementById("password");
 
-document.getElementById("password").addEventListener("input", function() {
-    resetStyles(this);
-    document.getElementById("errorMsg").textContent = "";
-});
+    if (emailElement && passwordElement) {
+        emailElement.addEventListener("input", function() {
+            resetStyles(this);
+            document.getElementById("errorMsg").textContent = "";
+        });
 
+        passwordElement.addEventListener("input", function() {
+            resetStyles(this);
+            document.getElementById("errorMsg").textContent = "";
+        });
+    }
+}
+
+resetLoginInputs();
 
 // FAQ (about.html)
 document.querySelectorAll('.accordion-header').forEach(button => {
@@ -85,28 +167,67 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 
 // Darkmode Toggle (everywhere)
 // Animations
-const toggle = document.getElementById('darkmode-toggle');
+function initializeDarkMode() {
+    const toggle = document.getElementById('darkmode-toggle');
+    const darkModeClass = 'dark-mode';
 
-toggle.addEventListener('change', function() {
-    document.body.classList.toggle('dark-mode');
-    
-    document.querySelectorAll('.navbar').forEach(navbar => {
-        navbar.classList.toggle('dark-mode');
+    if (!toggle) return;
+
+    if (localStorage.getItem('theme') === darkModeClass) {
+        applyDarkMode(true);
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function() {
+        const isDarkMode = toggle.checked;
+        applyDarkMode(isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? darkModeClass : 'light-mode');
     });
 
-    document.querySelectorAll('.btn-dark').forEach(btnDark => {
-        btnDark.classList.toggle('btn-light');
-        btnDark.classList.toggle('btn-dark');
-    });
+    function applyDarkMode(enable) {
+        if (document.body) {
+            document.body.classList.toggle(darkModeClass, enable);
+        }
 
-    document.querySelectorAll('.card').forEach(card => {
-        card.classList.toggle('dark-mode');
-    });
+        const navbars = document.querySelectorAll('.navbar');
+        if (navbars.length > 0) {
+            navbars.forEach(navbar => {
+                navbar.classList.toggle(darkModeClass, enable);
+            });
+        }
 
-    document.querySelectorAll('.footer').forEach(footer => {
-        footer.classList.toggle('dark-mode');
-    });
-});
+        const btnDarks = document.querySelectorAll('.btn-dark');
+        if (btnDarks.length > 0) {
+            btnDarks.forEach(btnDark => {
+                btnDark.classList.toggle('btn-light', enable);
+                btnDark.classList.toggle('btn-dark', !enable);
+            });
+        }
+
+        const cards = document.querySelectorAll('.card');
+        if (cards.length > 0) {
+            cards.forEach(card => {
+                card.classList.toggle(darkModeClass, enable);
+            });
+        }
+
+        const footers = document.querySelectorAll('.footer');
+        if (footers.length > 0) {
+            footers.forEach(footer => {
+                footer.classList.toggle(darkModeClass, enable);
+            });
+        }
+
+        const user__info = document.querySelectorAll('.userinfo__name');
+        if (user__info.length > 0) {
+            user__info.forEach(footer => {
+                footer.classList.toggle(darkModeClass, enable);
+            });
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", initializeDarkMode);
 
 
 // ! Assignment 5
@@ -133,7 +254,6 @@ function startTextRotation() {
 startTextRotation();
 
 // clear all buttons (Event Listeners on Buttons)
-
 function clearLogin() {
     document.addEventListener('DOMContentLoaded', function () {
         const clearBtn = document.getElementById('clearBtn');
@@ -195,17 +315,22 @@ function HandleKeyboard() {
 
 HandleKeyboard();
 
-// Switch Statements
+// Posts Filter
 function PostsFilterHandle() {
     document.addEventListener("DOMContentLoaded", function () {
         const buttons = document.querySelectorAll('.btn-info');
         const posts = document.querySelectorAll('.card-container');
         const activeFilters = new Set();
-    
+
+        const savedFilters = JSON.parse(localStorage.getItem('activeFilters')) || [];
+        savedFilters.forEach(filter => activeFilters.add(filter));
+        updateFilterButtons();
+        filterPosts();
+
         buttons.forEach(button => {
             button.addEventListener('click', function () {
                 const filter = this.getAttribute('data-filter');
-                
+
                 if (activeFilters.has(filter)) {
                     activeFilters.delete(filter);
                     this.classList.remove('active');
@@ -213,20 +338,28 @@ function PostsFilterHandle() {
                     activeFilters.add(filter);
                     this.classList.add('active');
                 }
-    
+
+                localStorage.setItem('activeFilters', JSON.stringify([...activeFilters]));
                 filterPosts();
             });
         });
-    
+
         function filterPosts() {
             posts.forEach(post => {
                 const badges = Array.from(post.querySelectorAll('.post-badge')).map(badge => badge.textContent.trim());
                 const isVisible = [...activeFilters].every(filter => badges.includes(filter));
-    
-                if (activeFilters.size === 0 || isVisible) {
-                    post.style.display = 'block';
+
+                post.style.display = activeFilters.size === 0 || isVisible ? 'block' : 'none';
+            });
+        }
+
+        function updateFilterButtons() {
+            buttons.forEach(button => {
+                const filter = button.getAttribute('data-filter');
+                if (activeFilters.has(filter)) {
+                    button.classList.add('active');
                 } else {
-                    post.style.display = 'none';
+                    button.classList.remove('active');
                 }
             });
         }
@@ -234,6 +367,7 @@ function PostsFilterHandle() {
 }
 
 PostsFilterHandle();
+
 
 // Play Sounds
 function ToggleSound() {

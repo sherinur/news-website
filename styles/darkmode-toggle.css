@@ -107,3 +107,8 @@ body.dark-mode .header__title  {
 .footer.dark-mode span {
     color: #ffffff;
 }
+
+a.user__info.dark-mode {
+    background-color: none;
+    color: #ffffff;
+}
