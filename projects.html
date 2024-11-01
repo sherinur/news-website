@@ -18,50 +18,48 @@
 
             <div class="header__container container">
 
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <div class="container fixed-top bg-body py-3 px-4">
-                        <div class="navbar-brand userinfo">
-                            <a href="#" class="userinfo__name hidden">Client name</a>
-                            <a href="./login.html" class="userinfo__login btn btn-dark">Log in</a>
-                        </div>
-                
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                
-                        <div class="collapse navbar-collapse" id="navbarContent">
-                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li class="nav-item d-flex align-items-center" style="padding-right: 50px;">
-                                    <div id="date-time"></div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="./index.html">News</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="./projects.html">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Newsletter</a>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="darkmode-toggle">
-                                        <label class="toggle-mode" for="darkmode-toggle">
-                                            <span class="slider"></span>
-                                        </label>
-                                    </div>
-                                    
-                                </li>
-                            </ul>
-                        </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container py-3 px-4">
+                    <div class="navbar-brand userinfo">
+                        <a href="#" class="userinfo__name hidden">Client name</a>
+                        <a href="./login.html" class="userinfo__login btn btn-dark">Log in</a>
+                        <a href="#" class="userinfo__logout btn btn-dark hidden">Log out</a>
                     </div>
-                </nav>
-               <div class="header__title">
-                    <h1>PROJECTS</h1>
-               </div>
+            
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./index.html" tabindex="0">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./projects.html" tabindex="0">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html" tabindex="0">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="0">Newsletter</a>
+                            </li>                                
+                            <li class="nav-item">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="darkmode-toggle">
+                                    <label class="toggle-mode" for="darkmode-toggle">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="header__title">
+                <h1 id="header-title">THE BLOG</h1>
+            </div>
             </div>
 
         </header>

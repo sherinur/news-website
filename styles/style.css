@@ -337,10 +337,6 @@ a.post-badge:hover {
     object-fit:fill; 
 }
 
-.navbar {
-    margin-bottom: 100px;
-}
-
 .content-author, .content-date {
     color: #6941C6;
 }

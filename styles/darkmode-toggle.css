@@ -109,6 +109,5 @@ body.dark-mode .header__title  {
 }
 
 a.user__info.dark-mode {
-    background-color: none;
     color: #ffffff;
 }
