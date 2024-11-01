@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Проверка сессии пользователя при загрузке страницы
 function checkUserSession() {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     const userEmail = localStorage.getItem("userEmail");
@@ -30,7 +29,6 @@ function checkUserSession() {
     }
 }
 
-// Функция для проверки формы и входа
 function validateForm() {
     const emailElement = document.getElementById("email");
     const passwordElement = document.getElementById("password");
@@ -72,13 +70,11 @@ function validateForm() {
     return true;
 }
 
-// Сохранение информации о пользователе в localStorage
 function saveUserSession(email) {
     localStorage.setItem("isLoggedIn", "true");
     localStorage.setItem("userEmail", email);
 }
 
-// Функция для обновления интерфейса после входа
 function updateUIForLoggedInUser(email) {
     const userName = document.querySelector(".userinfo__name");
     const loginButton = document.querySelector(".userinfo__login");
@@ -96,7 +92,6 @@ function updateUIForLoggedInUser(email) {
     }
 }
 
-// Функция для обновления интерфейса после выхода
 function updateUIForLoggedOutUser() {
     const userName = document.querySelector(".userinfo__name");
     const loginButton = document.querySelector(".userinfo__login");
@@ -114,7 +109,6 @@ function updateUIForLoggedOutUser() {
     }
 }
 
-// Выход из системы
 function logout() {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userEmail");
@@ -122,19 +116,16 @@ function logout() {
     updateUIForLoggedOutUser();
 }
 
-// Сброс стилей поля
 function resetStyles(element) {
     element.style.backgroundColor = "";
     element.style.border = "";
 }
 
-// Применение стиля ошибки
 function applyErrorStyle(element) {
     element.style.backgroundColor = "#d36b6b";
     element.style.border = "1px solid #a00";
 }
 
-// Очистка сообщения об ошибке при изменении значений в полях
 function resetLoginInputs() {
     const emailElement = document.getElementById("email");
     const passwordElement = document.getElementById("password");
