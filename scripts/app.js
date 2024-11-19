@@ -1,4 +1,4 @@
-const token = "5e5e2340e2a9e393a2748e5bb39c8c0a";
+const token = "6b7a52e23bcbde6c3f6e9f39191a7db0";
 
 async function start() {
     try {

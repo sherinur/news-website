@@ -156,8 +156,6 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 });
 
 
-// Darkmode Toggle (everywhere)
-// Animations
 function initializeDarkMode() {
     const toggle = document.getElementById('darkmode-toggle');
     const darkModeClass = 'dark-mode';
@@ -181,44 +179,60 @@ function initializeDarkMode() {
         }
 
         const navbars = document.querySelectorAll('.navbar');
-        if (navbars.length > 0) {
-            navbars.forEach(navbar => {
-                navbar.classList.toggle(darkModeClass, enable);
-            });
-        }
+        navbars.forEach(navbar => {
+            navbar.classList.toggle(darkModeClass, enable);
+        });
 
         const btnDarks = document.querySelectorAll('.btn-dark');
-        if (btnDarks.length > 0) {
-            btnDarks.forEach(btnDark => {
-                btnDark.classList.toggle('btn-light', enable);
-                btnDark.classList.toggle('btn-dark', !enable);
-            });
-        }
+        btnDarks.forEach(btnDark => {
+            btnDark.classList.toggle('btn-light', enable);
+            btnDark.classList.toggle('btn-dark', !enable);
+        });
 
         const cards = document.querySelectorAll('.card');
-        if (cards.length > 0) {
-            cards.forEach(card => {
-                card.classList.toggle(darkModeClass, enable);
-            });
-        }
+        cards.forEach(card => {
+            card.classList.toggle(darkModeClass, enable);
+        });
 
         const footers = document.querySelectorAll('.footer');
-        if (footers.length > 0) {
-            footers.forEach(footer => {
-                footer.classList.toggle(darkModeClass, enable);
-            });
-        }
+        footers.forEach(footer => {
+            footer.classList.toggle(darkModeClass, enable);
+        });
 
         const user__info = document.querySelectorAll('.userinfo__name');
-        if (user__info.length > 0) {
-            user__info.forEach(footer => {
-                footer.classList.toggle(darkModeClass, enable);
-            });
-        }
+        user__info.forEach(info => {
+            info.classList.toggle(darkModeClass, enable);
+        });
     }
 }
 
-document.addEventListener("DOMContentLoaded", initializeDarkMode);
+// Функция для инициализации после генерации постов
+function initializeAfterContentGenerated() {
+    const postsSection = document.querySelector('.posts-section');
+
+    // Если секция для постов отсутствует или пустая, сразу инициализируем DarkMode
+    if (!postsSection || postsSection.children.length === 0) {
+        initializeDarkMode();
+        return;
+    }
+
+    // Используем MutationObserver для отслеживания изменений в секции постов
+    const observer = new MutationObserver(() => {
+        const dynamicPosts = postsSection.querySelectorAll('.card-item');
+
+        // Если посты появились, инициализируем DarkMode
+        if (dynamicPosts.length > 0) {
+            observer.disconnect(); // Отключаем наблюдатель после выполнения
+            initializeDarkMode();
+        }
+    });
+
+    // Настраиваем наблюдатель
+    observer.observe(postsSection, { childList: true, subtree: true });
+}
+
+// Запускаем проверку после загрузки DOM
+document.addEventListener("DOMContentLoaded", initializeAfterContentGenerated);
 
 
 // ! Assignment 5
