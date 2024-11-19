@@ -306,11 +306,10 @@ function HandleKeyboard() {
 
 HandleKeyboard();
 
-// Posts Filter
 function PostsFilterHandle() {
     document.addEventListener("DOMContentLoaded", function () {
-        const buttons = document.querySelectorAll('.btn-info');
-        const posts = document.querySelectorAll('.card-container');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const postsSection = document.querySelector('.posts-section');
         const activeFilters = new Set();
 
         const savedFilters = JSON.parse(localStorage.getItem('activeFilters')) || [];
@@ -318,7 +317,7 @@ function PostsFilterHandle() {
         updateFilterButtons();
         filterPosts();
 
-        buttons.forEach(button => {
+        filterButtons.forEach(button => {
             button.addEventListener('click', function () {
                 const filter = this.getAttribute('data-filter');
 
@@ -336,16 +335,17 @@ function PostsFilterHandle() {
         });
 
         function filterPosts() {
+            const posts = postsSection.querySelectorAll('.card-item'); 
             posts.forEach(post => {
-                const badges = Array.from(post.querySelectorAll('.post-badge')).map(badge => badge.textContent.trim());
-                const isVisible = [...activeFilters].every(filter => badges.includes(filter));
+                const postCategories = post.getAttribute('data-categories').split(',').map(cat => cat.trim());
+                const isVisible = [...activeFilters].every(filter => postCategories.includes(filter));
 
                 post.style.display = activeFilters.size === 0 || isVisible ? 'block' : 'none';
             });
         }
 
         function updateFilterButtons() {
-            buttons.forEach(button => {
+            filterButtons.forEach(button => {
                 const filter = button.getAttribute('data-filter');
                 if (activeFilters.has(filter)) {
                     button.classList.add('active');

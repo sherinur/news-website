@@ -420,3 +420,7 @@ a.post-badge:hover {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 }
+
+.btn-info.active {
+    background-color: #3b9db1;
+}
