@@ -206,32 +206,26 @@ function initializeDarkMode() {
     }
 }
 
-// Функция для инициализации после генерации постов
 function initializeAfterContentGenerated() {
     const postsSection = document.querySelector('.posts-section');
 
-    // Если секция для постов отсутствует или пустая, сразу инициализируем DarkMode
     if (!postsSection || postsSection.children.length === 0) {
         initializeDarkMode();
         return;
     }
 
-    // Используем MutationObserver для отслеживания изменений в секции постов
     const observer = new MutationObserver(() => {
         const dynamicPosts = postsSection.querySelectorAll('.card-item');
 
-        // Если посты появились, инициализируем DarkMode
         if (dynamicPosts.length > 0) {
-            observer.disconnect(); // Отключаем наблюдатель после выполнения
+            observer.disconnect();
             initializeDarkMode();
         }
     });
 
-    // Настраиваем наблюдатель
     observer.observe(postsSection, { childList: true, subtree: true });
 }
 
-// Запускаем проверку после загрузки DOM
 document.addEventListener("DOMContentLoaded", initializeAfterContentGenerated);
 
 
