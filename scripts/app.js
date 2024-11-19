@@ -2,7 +2,7 @@ const token = "6b7a52e23bcbde6c3f6e9f39191a7db0";
 
 async function start() {
     try {
-        const url = "http://api.mediastack.com/v1/news?access_key=" + token + "&languages=en,-de";
+        const url = "https://api.mediastack.com/v1/news?access_key=" + token + "&languages=en,-de";
         const resp = await fetch(url);
         const respBody = await resp.json();
         const data = respBody.data;
