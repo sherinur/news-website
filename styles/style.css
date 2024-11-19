@@ -424,3 +424,7 @@ a.post-badge:hover {
 .btn-info.active {
     background-color: #3b9db1;
 }
+
+.userinfo__signin {
+    margin-left: 5px;
+}
