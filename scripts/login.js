@@ -1,9 +1,6 @@
 const adminLogin = "admin@example.com";
 const adminPassword = "admin";
 
-const sheriLogin = "sherinurislam@gmail.com"
-const sheriPassword = "Nurum123mi$"
-
 document.addEventListener("DOMContentLoaded", function() {
     checkUserSession();
 
@@ -62,11 +59,6 @@ function validateForm() {
 
     if (email === adminLogin && password === adminPassword) {
         alert("You have logged in as Admin");
-        saveUserSession(email);
-        updateUIForLoggedInUser(email);
-        return true;
-    } else if (email === sheriLogin && password === sheriPassword) {
-        alert("You have logged in as " + sheriLogin);
         saveUserSession(email);
         updateUIForLoggedInUser(email);
         return true;
